@@ -7,9 +7,6 @@
                 <div class="w-20 h-6 bg-gray-700 rounded-xl"></div>
                 <div class="w-8 h-6 bg-gray-700 rounded-2xl"></div>
             </div>
-            
         </div>
     </div>
-
-
 </template>
