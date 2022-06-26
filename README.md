@@ -1,7 +1,44 @@
-# Vue 3 + Vite
+# Trabajo Final III - Laboratorio de Computación III
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Trabajo practico final de Laboratorio de Computacion III. Consiste en un simulador de exchange con backend provisto por el profesor de la catedra.
 
-## Recommended IDE Setup
+## Simulador de Exchange o  billetera virtual.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+### Funcionamiento técnico requerido
+
+[Documentacion de requerimientos](https://docs.google.com/document/d/1-GoGeBKLTa79gpkWHA5HM0OUmaFpOXic-kwy23VWDZ0/edit)
+
+### Screenshot
+
+![](./github_src/5.png)
+![](./github_src/1.png)
+![](./github_src/2.png)
+![](./github_src/3.png)
+![](./github_src/4.png)
+
+***
+### Tecnologías
+
+Lista de tecnologías utilizadas en el proyecto:
+
+* [Vite](https://vitejs.dev/): Versión 2.9.9 X
+* [Vue js](https://vuejs.org/): Versión 3.2.25 X
+* [Vue-Router](https://router.vuejs.org/): Versión 4 X
+* [Vuex](https://vuex.vuejs.org/): Versión 4.0.2 X
+* [Vue-Chartjs](https://vue-chartjs.org/): Versión 4.1.1 X
+* [Chart js](https://vue-chartjs.org/): Versión 3.8.0 X
+* [Axios](https://axios-http.com/docs/intro): Versión 0.27.2 X
+* [Tailwind CSS](https://tailwindcss.com/): Versión 3.0.24 X
+* [Post CSS](https://postcss.org/): Versión 8.4.14 X
+* [Autoprefixer](https://github.com/postcss/autoprefixer): Versión 10.4.7 X
+* [Node js](https://nodejs.org/es/): Versión 16.15.0
+
+***
+### Operatividad
+
+Como instalar e inicializar el proyecto:
+```
+$ git clone https://github.com/FacuNBustos/Exchange-TrabajoFinal-lab3.git
+$ yarn install
+$ yarn run dev
+```

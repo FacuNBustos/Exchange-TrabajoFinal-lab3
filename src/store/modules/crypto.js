@@ -4,6 +4,7 @@ export default {
     namespaced: true,
     state: {
         crytoData: {},
+        checked: false,
     },
     getters: {
     },
@@ -14,12 +15,16 @@ export default {
     },
     actions: {
         handleSubmitCrypto ({state, commit}){
-            commit('handleReset');
+            if (state.checked != true) {
+                commit('handleReset');
             getCryptoDivisas()
             .then(function(response){
-                state.crytoData = response.data;
+                if (response != null){
+                    state.crytoData = response.data;
+                    state.checked = true;
+                };
             });
-            return state.crytoData;
+            };
         },
     }
 }

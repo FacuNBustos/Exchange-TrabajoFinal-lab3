@@ -4,13 +4,15 @@ export default {
     state: {
         home: true,
         shop: false,
-        profile: false
+        profile: false,
+        admin: false,
     },
     mutations: {
         handleActivesReset (state){
             state.home = false;
             state.shop = false;
             state.profile = false;
+            state.admin = false;
         }
     },
     actions: {
@@ -25,6 +27,10 @@ export default {
         handleChangeProfile ({state, commit}) {
             commit('handleActivesReset');
             state.profile = true;
+        },
+        handleChangeAdmin ({ state, commit }){
+            commit('handleActivesReset');
+            state.admin = true;
         }
     }
 }

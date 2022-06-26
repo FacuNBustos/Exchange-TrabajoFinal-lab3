@@ -1,6 +1,7 @@
 <template>
-    <nav class="bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r border-r border-gray-400
-    flex flex-col gap-1 pl-1 pt-4 shadow-lg">
+
+    <nav class="flex flex-col gap-1 pl-1 pt-4 
+    bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r border-r border-gray-400 shadow-lg">
         
         <div :class=' (this.$store.state.navbar.home)? active : notActive'
         @click="handleChangePage('home')">
@@ -16,13 +17,18 @@
         @click="handleChangePage('profile')">
             <img src="../assets/profile_logo.svg" alt="home" class="h-8 w-8">
         </div>
+
+        <div :class='(this.$store.state.navbar.admin) ? activeAdmin : notActive' class="mt-[610px] bottom-1"
+        @click="handleChangePage('admin')">
+            <img src="../assets/manage_logo.svg" alt="home" class="h-8 w-8">
+        </div>
         
     </nav>
+    
 </template>
 
 <script setup>
 import router from '../router/router';
-import store from '../store';
 
 const handleChangePage = (value) => {
     switch (value) {
@@ -35,15 +41,21 @@ const handleChangePage = (value) => {
         case 'profile':
             router.push('/profile');
             break;
+        case 'admin':
+            router.push('/administrator');
+            break;
     };
 };
 
-const notActive = `h-14 rounded-l-lg bg-gray-700/25 border-black border-b-2 border-l-2 shadow-sm shadow-black
-        flex justify-center items-center
+const notActive = `flex justify-center items-center h-14
+        bg-gray-700/25 border-black border-b-2 border-l-2 rounded-l-lg shadow-sm shadow-black
         hover:bg-gray-400/25 hover:cursor-pointer 
         active:bg-gray-200/25`;
 
-const active = `h-14 rounded-l-lg bg-gray-200/25 border-black border-b-2 border-l-2 shadow-lg
-        flex justify-center items-center`;
+const active = `flex justify-center items-center h-14  
+        bg-gray-200/25 border-black border-b-2 border-l-2 rounded-l-lg shadow-lg`;
+
+const activeAdmin = `flex justify-center items-center h-14  
+        bg-red-500/25 border-black border-b-2 border-l-2 rounded-l-lg shadow-lg`;
 
 </script>
