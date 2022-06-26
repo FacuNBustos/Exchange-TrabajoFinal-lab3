@@ -2,6 +2,7 @@
 <template>
 
     <div class="flex flex-row justify-center items-center rounded">
+
         <div class="w-96 h-full">
             <select class="form-select appearance-none
             text-center
@@ -17,7 +18,8 @@
             transition
             ease-in-out
             m-0
-            hover:cursor-pointer" id="typeCrypto"
+            hover:cursor-pointer"
+            id="typeCrypto"
             @change="handleChange">
                 <option :selected='this.$store.state.shop.type == "none"' value="none">Selecciona una crypto moneda</option>
                 <option :selected='this.$store.state.shop.type == "btc"' value="btc">Bitcoin</option>
@@ -30,19 +32,25 @@
                 <option :selected='this.$store.state.shop.type == "busd"' value="busd">Binance USD</option>
                 <option :selected='this.$store.state.shop.type == "sol"' value="sol">Solana</option>
                 <option :selected='this.$store.state.shop.type == "doge"' value="doge">Dogecoin</option>
+                <option :selected='this.$store.state.shop.type == "dai"' value="dai">DAI</option>
+                <option :selected='this.$store.state.shop.type == "dot"' value="dot">Polkadot</option>
             </select>
         </div>
-        <button class="flex justify-center items-center bg-white w-8 h-full rounded-r
+
+        <button class="flex justify-center items-center w-8 h-full  
+        bg-white rounded-r
         hover:bg-gray-200
-        active:bg-violet-300/75" @click="handleSubmit">
+        active:bg-violet-300/75"
+        @click="handleSubmit">
             <img src="../../assets/search_logo.svg" alt="search" class="w-6 h-6">
         </button>
+
     </div>
 
 </template>
 
-<script setup>import store from '../../store';
-
+<script setup>
+import store from '../../store';
 
 const handleChange = () => {
     const type = document.querySelector('#typeCrypto').value;
@@ -50,6 +58,8 @@ const handleChange = () => {
 }
 
 const handleSubmit = () => {
-    store.dispatch('shop/handleCheckedExchange')
+    const type = document.querySelector('#typeCrypto').value;
+    store.dispatch('shop/handleCheckedExchange');
+    store.dispatch('transaction/handleChangeType', type);
 }
 </script>

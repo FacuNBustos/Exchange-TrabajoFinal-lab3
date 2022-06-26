@@ -14,28 +14,32 @@
         </p>
 
     </div>
-        
+        <div class="flex justify-center items-center w-full h-full">
+            <GraphicCard :dataArray='crypto.sparkline_in_7d.price' :name='crypto.name' :variacion='crypto.price_change_percentage_24h'/>
+        </div>
     </div>
 </template>
 
 <script>
 import router from '../../router/router';
 import store from '../../store';
+import GraphicCard from './GraphicCard.vue';
 
 export default {
     props: {
         crypto: {
             type: Object,
-            default: () => {},
+            default: () => { },
             required: true,
         }
     },
     methods: {
         handleClick() {
-            store.dispatch('shop/handleChangeType', this.crypto.symbol);
-            store.dispatch('shop/handleCheckedExchange');
-            router.push('/shop');
+            store.dispatch("shop/handleChangeType", this.crypto.symbol);
+            store.dispatch("shop/handleCheckedExchange");
+            router.push("/shop");
         }
-    }
+    },
+    components: { GraphicCard }
 }
 </script>

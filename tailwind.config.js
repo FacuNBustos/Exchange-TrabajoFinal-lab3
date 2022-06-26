@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         header: '70px 1fr',
-        card: 'repeat(5, 330px)'
+        card: 'repeat(5, 330px)',
+        cardAdmin : '1fr 100px'
       },
       gridTemplateRows: {
         header: '50px 1fr',

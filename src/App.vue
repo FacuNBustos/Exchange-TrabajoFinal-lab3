@@ -1,10 +1,10 @@
 
 <template>
-  <div class="w-screen h-screen grid grid-rows-header">
+  <div class="grid grid-rows-header w-screen h-screen">
 
     <HeaderView />
 
-    <div class="w-full h-full grid grid-cols-header">
+    <div class="grid grid-cols-header w-full h-full">
 
       <NavView />
 
@@ -12,11 +12,14 @@
 
     </div>
 
+    <ChargePage v-if="this.$store.state.helper.load"/>
+
   </div>
 </template>
 
 <script setup>
 import HeaderView from './views/HeaderView.vue';
 import NavView from './views/NavView.vue';
+import ChargePage from './components/ChargePage.vue';
 
 </script>
