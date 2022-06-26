@@ -34,7 +34,8 @@ const handleClick = () => {
     if (checkID(id)){
         store.dispatch('profile/handleChangeId', id);
     }else {
-        alert('Error');
+        store.dispatch('helper/handleChangeAlertMessage', 'El ID solo puede ser ALFANUMERICO');
+        store.dispatch('helper/handleChangeAlert');
     }
     
 }

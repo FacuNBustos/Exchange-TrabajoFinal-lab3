@@ -82,16 +82,19 @@ const handleSubmitSell = async () => {
         store.dispatch('helper/handleChangeLoad');
         const response = await postSellApi();
         if (response){
-            alert('Comprado correctamente');
+            store.dispatch('helper/handleChangeAlertMessage', 'Venta realizada con exito.');
+            store.dispatch('helper/handleChangeAlert');
             store.dispatch('profile/rechargeId');
             store.dispatch('helper/handleChangeLoad');
             store.dispatch('transaction/handleCancelTransaction');
         }else {
-            alert('compra error');
+            store.dispatch('helper/handleChangeAlertMessage', 'Ocurrio un error en la venta.');
+            store.dispatch('helper/handleChangeAlert');
             store.dispatch('helper/handleChangeLoad');
         }
     }else {
-        alert('No se puede vender');
+        store.dispatch('helper/handleChangeAlertMessage', 'No es posible realizar la venta.');
+        store.dispatch('helper/handleChangeAlert');
     }
 };
 
