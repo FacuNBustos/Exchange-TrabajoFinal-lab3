@@ -13,6 +13,7 @@
     </div>
 
     <ChargePage v-if="this.$store.state.helper.load"/>
+    <CardAlert v-if="this.$store.state.helper.alert"/>
 
   </div>
 </template>
@@ -21,5 +22,6 @@
 import HeaderView from './views/HeaderView.vue';
 import NavView from './views/NavView.vue';
 import ChargePage from './components/ChargePage.vue';
+import CardAlert from './components/cardAlert.vue';
 
 </script>

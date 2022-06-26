@@ -84,16 +84,23 @@ const handleSubmitCalculate = () => {
 }
 
 const handleSubmitBuy = async () => {
-    store.dispatch('helper/handleChangeLoad');
-    const response = await postBuyApi();
-    if (response){
-        alert('Comprado correctamente');
-        store.dispatch('profile/rechargeId');
-        store.dispatch('transaction/handleCancelTransaction');
+    if (store.state.transaction.quantity > 0){
         store.dispatch('helper/handleChangeLoad');
+        const response = await postBuyApi();
+        if (response){
+            store.dispatch('helper/handleChangeAlertMessage', 'Compra realizada con exito.');
+            store.dispatch('helper/handleChangeAlert');
+            store.dispatch('profile/rechargeId');
+            store.dispatch('transaction/handleCancelTransaction');
+            store.dispatch('helper/handleChangeLoad');
+        }else {
+            store.dispatch('helper/handleChangeAlertMessage', 'Ocurrio un error en la compra.');
+            store.dispatch('helper/handleChangeAlert');
+            store.dispatch('helper/handleChangeLoad');
+        }
     }else {
-        alert('compra error');
-        store.dispatch('helper/handleChangeLoad');
+        store.dispatch('helper/handleChangeAlertMessage', 'No se puede realizar esta compra.');
+        store.dispatch('helper/handleChangeAlert');
     }
 }
 </script>
