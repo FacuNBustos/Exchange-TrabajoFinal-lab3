@@ -1,26 +1,30 @@
 <template>
 
-    <nav class="flex flex-col gap-1 pl-1 pt-4 
+    <nav class="flex flex-col pl-1 pt-4 
     bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r border-r border-gray-400 shadow-lg">
         
-        <div :class=' (this.$store.state.navbar.home)? active : notActive'
-        @click="handleChangePage('home')">
-            <img src="../assets/home_logo.svg" alt="home" class="h-8 w-8">
+        <div class="flex flex-col h-[50%] gap-1">
+            <div :class=' (this.$store.state.navbar.home)? active : notActive'
+            @click="handleChangePage('home')">
+                <img src="../assets/home_logo.svg" alt="home" class="h-8 w-8">
+            </div>
+
+            <div :class='(this.$store.state.navbar.shop) ? active : notActive'
+            @click="handleChangePage('shop')">
+                <img src="../assets/buy_logo.svg" alt="home" class="h-8 w-8">
+            </div>
+
+            <div :class='(this.$store.state.navbar.profile) ? active : notActive'
+            @click="handleChangePage('profile')">
+                <img src="../assets/profile_logo.svg" alt="home" class="h-8 w-8">
+            </div>
         </div>
 
-        <div :class='(this.$store.state.navbar.shop) ? active : notActive'
-        @click="handleChangePage('shop')">
-            <img src="../assets/buy_logo.svg" alt="home" class="h-8 w-8">
-        </div>
-
-        <div :class='(this.$store.state.navbar.profile) ? active : notActive'
-        @click="handleChangePage('profile')">
-            <img src="../assets/profile_logo.svg" alt="home" class="h-8 w-8">
-        </div>
-
-        <div :class='(this.$store.state.navbar.admin) ? activeAdmin : notActive' class="mt-[610px] bottom-1"
-        @click="handleChangePage('admin')">
-            <img src="../assets/manage_logo.svg" alt="home" class="h-8 w-8">
+        <div class="h-[50%] flex flex-col justify-end pb-2">
+            <div :class='(this.$store.state.navbar.admin) ? activeAdmin : notActive' class="bottom-1"
+            @click="handleChangePage('admin')">
+                <img src="../assets/manage_logo.svg" alt="home" class="h-8 w-8">
+            </div>
         </div>
         
     </nav>
@@ -57,5 +61,4 @@ const active = `flex justify-center items-center h-14
 
 const activeAdmin = `flex justify-center items-center h-14  
         bg-red-500/25 border-black border-b-2 border-l-2 rounded-l-lg shadow-lg`;
-
 </script>
