@@ -28,8 +28,8 @@ const postBuyApi = async () => {
                 action: "purchase",
                 crypto_code: store.state.transaction.type,
                 crypto_amount: store.state.transaction.quantity,
-                money: `${store.state.transaction.cost}`,
-                datetime: formatDate(new Date(Date.now()))
+                money: `${store.state.transaction.cost.toFixed(2)}`,
+                datetime: await formatDate(new Date())
             };
             const response = await postApi(data);
             return response.data;
