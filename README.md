@@ -6,7 +6,7 @@ Trabajo practico final de Laboratorio de Computacion III. Consiste en un simulad
 
 ### Funcionamiento técnico requerido
 
-[Documentacion de requerimientos](https://docs.google.com/document/d/1-GoGeBKLTa79gpkWHA5HM0OUmaFpOXic-kwy23VWDZ0/edit)
+[Documentacion de requerimientos]()
 
 ### Screenshot
 
