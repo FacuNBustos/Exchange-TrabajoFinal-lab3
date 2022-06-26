@@ -1,13 +1,22 @@
-<script setup>
-
-</script>
 
 <template>
-  <div class="w-screen h-16 bg-white"
-  >Init project</div>
-  <router-view />
+  <div class="w-screen h-screen grid grid-rows-header">
+
+    <HeaderView />
+
+    <div class="w-full h-full grid grid-cols-header">
+
+      <NavView />
+
+      <router-view />
+
+    </div>
+
+  </div>
 </template>
 
-<style>
+<script setup>
+import HeaderView from './views/HeaderView.vue';
+import NavView from './views/NavView.vue';
 
-</style>
+</script>
