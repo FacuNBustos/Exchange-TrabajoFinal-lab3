@@ -4,9 +4,9 @@
     bg-gray-500/75 rounded mb-2 ml-[200px] shadow-sm shadow-black">
 
         <div class="flex flex-row justify-between items-center">
-            <h3 class="w-full text-left font-roboto uppercase">{{this.keyExchange}}</h3>
-            <p class="w-full text-left font-roboto">$ {{this.$store.state.shop.exchanges[this.keyExchange].totalAsk}}</p>
-            <p class="w-full text-left font-roboto">$ {{this.$store.state.shop.exchanges[this.keyExchange].totalBid}}</p>
+            <h3 class="w-full text-left font-roboto uppercase">{{keyExchange}}</h3>
+            <p class="w-full text-left font-roboto">$ {{$store.state.shop.exchanges[keyExchange].totalAsk}}</p>
+            <p class="w-full text-left font-roboto">$ {{$store.state.shop.exchanges[keyExchange].totalBid}}</p>
         </div>
 
         <div class="flex flex-row gap-4 justify-end items-center">
@@ -15,7 +15,7 @@
             bg-green-200 rounded shadow-sm shadow-gray-800 border border-black
             hover:bg-green-300
             active:bg-green-400"
-            @click="this.handleClickBuy()">
+            @click="handleClickBuy()">
                 <img src="../../assets/shopping_logo.svg" alt="comprar" class="w-8 h-8">
                 <p>Comprar</p>
             </button>
@@ -24,7 +24,7 @@
             bg-red-200 rounded shadow-sm shadow-gray-800 border border-black
             hover:bg-red-300
             active:bg-red-400"
-            @click="this.handleClickSell()">
+            @click="handleClickSell()">
                 <img src="../../assets/sell_logo.svg" alt="vender" class="w-8 h-8">
                 <p>Vender</p>
             </button>

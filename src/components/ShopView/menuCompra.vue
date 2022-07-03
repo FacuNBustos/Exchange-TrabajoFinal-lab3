@@ -9,7 +9,7 @@
             <p class="font-roboto text-gray-800">Datos transaccion</p>
 
             <div class="flex flex-row justify-center items-center h-10 gap-[50px]">
-                <p><span class="font-roboto text-gray-800/75 mr-2">ID:</span>{{this.$store.state.profile.id.toUpperCase()}}</p>
+                <p><span class="font-roboto text-gray-800/75 mr-2">ID:</span>{{$store.state.profile.id.toUpperCase()}}</p>
                 <p><span class="font-roboto text-gray-800/75 mr-1">FECHA:</span> {{new Date(Date.now()).toLocaleDateString()}}</p>
             </div>
             </div>
@@ -28,16 +28,16 @@
 
                     <div class="flex flex-col justify-center items-center mt-2">
                         <div class="flex justify-between items-center w-[450px]">
-                            <p><span class="font-roboto text-gray-800/75 mr-2">EXCHANGE:</span>{{this.$store.state.transaction.exchange.toUpperCase()}}</p>
-                            <p><span class="font-roboto text-gray-800/75 mr-1">MONEDA:</span> {{this.$store.state.transaction.type.toUpperCase()}}</p>
+                            <p><span class="font-roboto text-gray-800/75 mr-2">EXCHANGE:</span>{{$store.state.transaction.exchange.toUpperCase()}}</p>
+                            <p><span class="font-roboto text-gray-800/75 mr-1">MONEDA:</span> {{$store.state.transaction.type.toUpperCase()}}</p>
                         </div>
                         <div class="flex justify-between items-center w-[450px]">
-                            <p><span class="font-roboto text-gray-800/75 mr-2">PRECIO:</span>$ {{this.$store.state.transaction.price}}</p>
+                            <p><span class="font-roboto text-gray-800/75 mr-2">PRECIO:</span>$ {{$store.state.transaction.price}}</p>
                             <p><span class="font-roboto text-gray-800/75 mr-1">TIPO:</span>COMPRA</p>                
                         </div>
-                        <div class="flex justify-between items-center w-[450px]" v-if="this.$store.state.transaction.cost">
-                            <p><span class="font-roboto text-gray-800/75 mr-2">CANTIDAD:</span>{{this.$store.state.transaction.quantity}} {{this.$store.state.transaction.type}}</p>
-                            <p><span class="font-roboto text-gray-800/75 mr-1">COSTO:</span>$ {{this.$store.state.transaction.cost}}</p>
+                        <div class="flex justify-between items-center w-[450px]" v-if="$store.state.transaction.cost">
+                            <p><span class="font-roboto text-gray-800/75 mr-2">CANTIDAD:</span>{{$store.state.transaction.quantity}} {{$store.state.transaction.type}}</p>
+                            <p><span class="font-roboto text-gray-800/75 mr-1">COSTO:</span>$ {{$store.state.transaction.cost}}</p>
                         </div>
                     </div>
 

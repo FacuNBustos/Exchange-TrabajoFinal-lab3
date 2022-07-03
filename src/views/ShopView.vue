@@ -22,8 +22,8 @@
 
     </article>
 
-    <MenuCompra v-if="this.$store.state.transaction.buyCheck"/>
-    <MenuVenta v-if="this.$store.state.transaction.sellCheck"/>
+    <MenuCompra v-if="$store.state.transaction.buyCheck"/>
+    <MenuVenta v-if="$store.state.transaction.sellCheck"/>
 
 </template>
 

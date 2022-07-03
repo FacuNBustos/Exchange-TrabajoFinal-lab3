@@ -4,24 +4,24 @@
     bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r border-r border-gray-400 shadow-lg">
         
         <div class="flex flex-col h-[50%] gap-1">
-            <div :class=' (this.$store.state.navbar.home)? active : notActive'
+            <div :class=' ($store.state.navbar.home)? active : notActive'
             @click="handleChangePage('home')">
                 <img src="../assets/home_logo.svg" alt="home" class="h-8 w-8">
             </div>
 
-            <div :class='(this.$store.state.navbar.shop) ? active : notActive'
+            <div :class='($store.state.navbar.shop) ? active : notActive'
             @click="handleChangePage('shop')">
                 <img src="../assets/buy_logo.svg" alt="home" class="h-8 w-8">
             </div>
 
-            <div :class='(this.$store.state.navbar.profile) ? active : notActive'
+            <div :class='($store.state.navbar.profile) ? active : notActive'
             @click="handleChangePage('profile')">
                 <img src="../assets/profile_logo.svg" alt="home" class="h-8 w-8">
             </div>
         </div>
 
         <div class="h-[50%] flex flex-col justify-end pb-2">
-            <div :class='(this.$store.state.navbar.admin) ? activeAdmin : notActive' class="bottom-1"
+            <div :class='($store.state.navbar.admin) ? activeAdmin : notActive' class="bottom-1"
             @click="handleChangePage('admin')">
                 <img src="../assets/manage_logo.svg" alt="home" class="h-8 w-8">
             </div>

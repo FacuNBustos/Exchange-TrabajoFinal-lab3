@@ -1,8 +1,8 @@
 <template>
 
     <article class="bg-gradient-to-t from-gray-800 to-gray-600">
-        <CardLogin v-if="!this.$store.state.profile.check"/>
-        <CardProfile v-if="this.$store.state.profile.check" />
+        <CardLogin v-if="!$store.state.profile.check"/>
+        <CardProfile v-if="$store.state.profile.check" />
     </article>
     
 </template>

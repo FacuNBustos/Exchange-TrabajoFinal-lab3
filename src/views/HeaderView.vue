@@ -6,11 +6,11 @@
         <img src="../assets/LogoExchange.png" alt="exchange logo" class="w-8 h-8 mr-2">
         <h1 class="text-2xl font-roboto">Exchange simulator</h1>
 
-        <div class="absolute h-10 right-1 flex justify-center items-center pr-3" v-if="this.$store.state.profile.id">
+        <div class="absolute h-10 right-1 flex justify-center items-center pr-3" v-if="$store.state.profile.id">
             <div class="flex flex-row hover:cursor-pointer mr-4"
             @click="handleProfile">
                 <img src="../assets/profile-svgrepo-com.svg" alt="" class="mr-2 w-8 h-8">
-                <h3 class="text-roboto text-white">{{convertir(this.$store.state.profile.id)}}</h3>
+                <h3 class="text-roboto text-white">{{convertir($store.state.profile.id)}}</h3>
             </div>
             <button class="p-1.5 rounded text-roboto text-white bg-gray-700
             hover:bg-gray-800

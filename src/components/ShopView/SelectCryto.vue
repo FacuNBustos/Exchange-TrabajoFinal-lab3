@@ -21,19 +21,19 @@
             hover:cursor-pointer"
             id="typeCrypto"
             @change="handleChange">
-                <option :selected='this.$store.state.shop.type == "none"' value="none">Selecciona una crypto moneda</option>
-                <option :selected='this.$store.state.shop.type == "btc"' value="btc">Bitcoin</option>
-                <option :selected='this.$store.state.shop.type == "eth"' value="eth">Etherium</option>
-                <option :selected='this.$store.state.shop.type == "usdt"' value="usdt">Tether</option>
-                <option :selected='this.$store.state.shop.type == "usdc"' value="usdc">USD Coin</option>
-                <option :selected='this.$store.state.shop.type == "bnb"' value="bnb">BNB</option>
-                <option :selected='this.$store.state.shop.type == "ada"' value="ada">Cardano</option>
-                <option :selected='this.$store.state.shop.type == "xrp"' value="xrp">XRP</option>
-                <option :selected='this.$store.state.shop.type == "busd"' value="busd">Binance USD</option>
-                <option :selected='this.$store.state.shop.type == "sol"' value="sol">Solana</option>
-                <option :selected='this.$store.state.shop.type == "doge"' value="doge">Dogecoin</option>
-                <option :selected='this.$store.state.shop.type == "dai"' value="dai">DAI</option>
-                <option :selected='this.$store.state.shop.type == "dot"' value="dot">Polkadot</option>
+                <option :selected='$store.state.shop.type == "none"' value="none">Selecciona una crypto moneda</option>
+                <option :selected='$store.state.shop.type == "btc"' value="btc">Bitcoin</option>
+                <option :selected='$store.state.shop.type == "eth"' value="eth">Etherium</option>
+                <option :selected='$store.state.shop.type == "usdt"' value="usdt">Tether</option>
+                <option :selected='$store.state.shop.type == "usdc"' value="usdc">USD Coin</option>
+                <option :selected='$store.state.shop.type == "bnb"' value="bnb">BNB</option>
+                <option :selected='$store.state.shop.type == "ada"' value="ada">Cardano</option>
+                <option :selected='$store.state.shop.type == "xrp"' value="xrp">XRP</option>
+                <option :selected='$store.state.shop.type == "busd"' value="busd">Binance USD</option>
+                <option :selected='$store.state.shop.type == "sol"' value="sol">Solana</option>
+                <option :selected='$store.state.shop.type == "doge"' value="doge">Dogecoin</option>
+                <option :selected='$store.state.shop.type == "dai"' value="dai">DAI</option>
+                <option :selected='$store.state.shop.type == "dot"' value="dot">Polkadot</option>
             </select>
         </div>
 

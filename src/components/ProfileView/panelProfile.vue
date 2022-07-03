@@ -7,7 +7,7 @@
                <div class="flex flex-row items-center h-full">
                    <img src="../../assets/profile-svgrepo-com.svg" class="h-14 mr-3 ml-2">
                    <h2 class="text-roboto text-xl text-gray-200">
-                       {{convertir(this.$store.state.profile.id.toUpperCase())}}
+                       {{convertir($store.state.profile.id.toUpperCase())}}
                    </h2>
                </div>
                 
@@ -45,7 +45,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="elem in this.$store.state.profile.distribution">
+                                    <tr v-for="elem in $store.state.profile.distribution">
                                         <td v-if="elem.quantityPurchase - elem.quantitySale > 0">{{elem.code.toUpperCase()}}</td>
                                         <td v-if="elem.quantityPurchase - elem.quantitySale > 0">{{elem.quantityPurchase - elem.quantitySale}}</td>
                                         <td v-if="elem.quantityPurchase - elem.quantitySale > 0">${{elem.valued.toFixed(2)}}</td>
@@ -70,7 +70,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="elem in this.$store.state.profile.distribution">
+                                    <tr v-for="elem in $store.state.profile.distribution">
                                         <td>{{elem.code.toUpperCase()}}</td>
                                         <td>$ {{elem.profit.toFixed(2)}}</td>
                                     </tr>
@@ -100,7 +100,7 @@
                </div>
                <div class="flex-grow overflow-auto pl-2 pr-3 text-center w-full h-[90%] p-1">
                    
-                <CardHistory v-for="elem in this.$store.state.profile.history" :history='elem'/>
+                <CardHistory v-for="elem in $store.state.profile.history" :history='elem'/>
                    
 
                </div>

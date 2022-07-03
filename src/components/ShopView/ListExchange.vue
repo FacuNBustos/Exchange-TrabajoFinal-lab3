@@ -2,9 +2,9 @@
 <template>
 
     <div class="flex flex-col w-[100rem] h-[40rem] mt-3">
-        <div class="flex-grow overflow-auto pl-6 pr-6" v-if="this.$store.state.shop.exchanges">
+        <div class="flex-grow overflow-auto pl-6 pr-6" v-if="$store.state.shop.exchanges">
 
-        <CardExchange v-for="elem in Object.keys(this.$store.state.shop.exchanges)" :keyExchange="elem"/>
+        <CardExchange v-for="elem in Object.keys($store.state.shop.exchanges)" :keyExchange="elem"/>
             
         </div>
     </div>

@@ -12,8 +12,8 @@
 
     </div>
 
-    <ChargePage v-if="this.$store.state.helper.load"/>
-    <CardAlert v-if="this.$store.state.helper.alert"/>
+    <ChargePage v-if="$store.state.helper.load"/>
+    <CardAlert v-if="$store.state.helper.alert"/>
 
   </div>
 </template>
